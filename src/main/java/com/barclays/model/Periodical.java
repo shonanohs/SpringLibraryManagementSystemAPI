@@ -19,12 +19,10 @@ public class Periodical extends LendableMaterial {
         super(title);
     }
 
-    @Override
     public Integer getId() {
         return id;
     }
 
-    @Override
     public void setId(Integer id) {
         this.id = id;
     }
