@@ -17,7 +17,7 @@ public class Film extends LendableMaterial {
     private LocalDate releaseDate;
     @Enumerated(EnumType.STRING)
     private Genre genre;
-    private int rating;
+    private String rating;
 
     public Film(String title) {
         super(title);
@@ -71,11 +71,11 @@ public class Film extends LendableMaterial {
         this.genre = genre;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class PeriodicalController {
     private final PeriodicalService periodicalService;
-    @GetMapping("/periodical")
+    @GetMapping("/periodicals")
     public List<Periodical> getAllPeriodical() {
         List<Periodical> periodicals = Collections.emptyList();
         return periodicals = periodicalService.findAll();

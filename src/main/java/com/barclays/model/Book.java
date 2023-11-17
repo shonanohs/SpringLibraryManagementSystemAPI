@@ -42,11 +42,11 @@ public class Book extends LendableMaterial {
         this.publisher = publisher;
     }
 
-    public Genre getGenre() {
-        return genre;
+    public String getGenre() {
+        return this.genre.name();
     }
 
-    public void setGenre(Genre genre) {
-        this.genre = genre;
+    public void setGenre(String genre) {
+        this.genre = Genre.valueOf(genre);
     }
 }

@@ -7,5 +7,6 @@ public enum Genre {
     SCIENCEFICTION,
     FICTION,
     CHILDREN,
+    COMEDY,
     HORROR;
 }

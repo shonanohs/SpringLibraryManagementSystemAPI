@@ -13,8 +13,8 @@ public class Periodical extends LendableMaterial {
     @Id
     @GeneratedValue
     private Integer id;
-
     private LocalDate publicationDate;
+
     public Periodical(String title) {
         super(title);
     }
