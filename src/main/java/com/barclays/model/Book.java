@@ -14,6 +14,10 @@ public class Book extends LendableMaterial {
     @Enumerated(EnumType.STRING)
     private Genre genre;
 
+    public Book(String title) {
+        super(title);
+    }
+
     public Integer getId() {
         return id;
     }

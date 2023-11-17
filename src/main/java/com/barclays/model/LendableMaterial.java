@@ -11,8 +11,11 @@ public abstract class LendableMaterial {
     @Id
     @GeneratedValue
     private Integer id;
-
     private String title;
+
+    public LendableMaterial(String title) {
+        this.title = title;
+    }
 
     public Integer getId() {
         return id;

@@ -19,6 +19,10 @@ public class Film extends LendableMaterial {
     private Genre genre;
     private int rating;
 
+    public Film(String title) {
+        super(title);
+    }
+
     public Integer getId() {
         return id;
     }

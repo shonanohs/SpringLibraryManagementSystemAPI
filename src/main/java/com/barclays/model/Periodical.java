@@ -15,6 +15,9 @@ public class Periodical extends LendableMaterial {
     private Integer id;
 
     private LocalDate publicationDate;
+    public Periodical(String title) {
+        super(title);
+    }
 
     @Override
     public Integer getId() {
