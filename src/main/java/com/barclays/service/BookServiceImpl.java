@@ -1,6 +1,7 @@
 package com.barclays.service;
 
 import com.barclays.model.Book;
+import com.barclays.model.Genre;
 import com.barclays.repository.BookRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,5 +28,20 @@ public class BookServiceImpl implements BookService {
     public Book findById(int id) {
         Optional<Book> books = bookRepository.findById(id);
         return books.orElseGet(() -> new Book("No books with id " + id));
+    }
+
+    @Override
+    public List<Book> findByTitleContains(String filter) {
+        return bookRepository.findByTitleContains(filter);
+    }
+
+    @Override
+    public List<Book> findByGenreContains(Genre filter) {
+        return bookRepository.findByGenre(filter);
+    }
+
+    @Override
+    public List<Book> findByAuthorContains(String filter) {
+        return bookRepository.findByAuthorContains(filter);
     }
 }

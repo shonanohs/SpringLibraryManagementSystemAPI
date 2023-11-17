@@ -28,4 +28,19 @@ public class FilmServiceImpl implements FilmService {
         Optional<Film> films = filmRepository.findById(id);
         return films.orElseGet(() -> new Film("No films with id " + id));
     }
+
+    @Override
+    public List<Film> findByTitleContains(String titleFilter) {
+        return filmRepository.findByTitleContains(titleFilter);
+    }
+
+    @Override
+    public List<Film> findByDirectorContains(String directorFilter) {
+        return filmRepository.findByDirectorContains(directorFilter);
+    }
+
+    @Override
+    public List<Film> findByGenreContains(String genreFilter) {
+        return filmRepository.findByGenreContains(genreFilter);
+    }
 }
