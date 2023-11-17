@@ -1,8 +1,10 @@
 package com.barclays.model;
 
+import jakarta.persistence.MappedSuperclass;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
+@MappedSuperclass
 public abstract class LendableMaterial {
     private String title;
 
