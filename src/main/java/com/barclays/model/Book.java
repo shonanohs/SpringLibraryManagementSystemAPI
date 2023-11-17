@@ -43,6 +43,9 @@ public class Book extends LendableMaterial {
     }
 
     public String getGenre() {
+        if (this.genre == null) {
+            return null;
+        }
         return this.genre.name();
     }
 

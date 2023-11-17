@@ -26,6 +26,6 @@ public class PeriodicalServiceImpl implements PeriodicalService {
     @Override
     public Periodical findById(int id) {
         Optional<Periodical> periodicals = periodicalRepository.findById(id);
-        return periodicals.orElseGet(() -> new Periodical("No periodicals with id" + id));
+        return periodicals.orElseGet(() -> new Periodical("No periodicals with id " + id));
     }
 }

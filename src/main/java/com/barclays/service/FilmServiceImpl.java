@@ -26,6 +26,6 @@ public class FilmServiceImpl implements FilmService {
     @Override
     public Film findById(int id) {
         Optional<Film> films = filmRepository.findById(id);
-        return films.orElseGet(() -> new Film("No films with id" + id));
+        return films.orElseGet(() -> new Film("No films with id " + id));
     }
 }
