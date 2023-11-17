@@ -1,8 +1,6 @@
 package com.barclays.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -13,6 +11,7 @@ public class Book extends LendableMaterial {
     private Integer id;
     private String author;
     private String publisher;
+    @Enumerated(EnumType.STRING)
     private Genre genre;
 
     public Integer getId() {

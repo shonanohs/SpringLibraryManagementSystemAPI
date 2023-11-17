@@ -1,8 +1,6 @@
 package com.barclays.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -17,6 +15,7 @@ public class Film extends LendableMaterial {
     private String director;
     private String screenwriter;
     private LocalDate releaseDate;
+    @Enumerated(EnumType.STRING)
     private Genre genre;
     private int rating;
 
