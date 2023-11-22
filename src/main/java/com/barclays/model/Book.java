@@ -6,11 +6,19 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 public class Book extends LendableMaterial {
+
     @Id
-    @GeneratedValue
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_seq")
+    @SequenceGenerator(
+            name = "book_seq",
+            sequenceName = "book_seq",
+            initialValue = 1,
+            allocationSize = 1
+    )
+    private int id;
     private String author;
     private String publisher;
+
     @Enumerated(EnumType.STRING)
     private Genre genre;
 

@@ -9,7 +9,13 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Film extends LendableMaterial {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "film_seq")
+    @SequenceGenerator(
+            name = "film_seq",
+            sequenceName = "film_seq",
+            initialValue = 1,
+            allocationSize = 1
+    )
     private Integer id;
     private String leadActor;
     private String director;

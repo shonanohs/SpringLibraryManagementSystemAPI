@@ -1,8 +1,6 @@
 package com.barclays.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -11,7 +9,13 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Periodical extends LendableMaterial {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "periodical_seq")
+    @SequenceGenerator(
+            name = "periodical_seq",
+            sequenceName = "periodical_seq",
+            initialValue = 1,
+            allocationSize = 1
+    )
     private Integer id;
     private LocalDate publicationDate;
 
