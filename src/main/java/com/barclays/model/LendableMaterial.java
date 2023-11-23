@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 public abstract class LendableMaterial {
     private String title;
 
-    public LendableMaterial(String title) {
+    protected LendableMaterial(String title) {
         this.title = title;
     }
 

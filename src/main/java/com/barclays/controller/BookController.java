@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -21,7 +20,7 @@ public class BookController {
     public List<Book> getAllBooks(@PathParam("titleFilter") String titleFilter,
                                   @PathParam("authorFilter") String authorFilter,
                                   @PathParam("genreFilter") String genreFilter) {
-        List<Book> books = Collections.emptyList();
+        List<Book> books;
         if (StringUtils.isNotBlank(titleFilter)) {
             books = bookService.findByTitleContains(titleFilter);
         }
